@@ -14,3 +14,19 @@
 </div>
 <div class="rectangle"></div>
 <p class="main-text">Tere tulemast minu lehele</p>
+
+<button (click)="muudaLike(!liked)">Muuda Like</button>
+<img *ngIf="liked === true" (click)="muudaLike(false)" src="assets/liked.svg" alt="">
+<img *ngIf="liked === false" (click)="muudaLike(true)" src="assets/not-liked.svg" alt="">
+
+<br><br>
+
+<button *ngIf="kogus>0" (click)="zero()">Zero</button> 
+
+<br>
+
+<button [disabled]="kogus === 0" (click)="vahenda()">-</button>
+<div>{{ kogus }}</div>
+<button [disabled]="kogus === 10" (click)="suurenda()">+</button>
+
+<!-- string interpolation {{}}-- mille vahel on muutuja, mida otsitakse .ts failist -->

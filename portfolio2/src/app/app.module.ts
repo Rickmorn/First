@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { WorkComponent } from './work/work.component';
 import { CoursesComponent } from './courses/courses.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,8 +18,9 @@ import { HobbiesComponent } from './hobbies/hobbies.component';
     HobbiesComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule, // <--- *ngIf
+    AppRoutingModule,  // <--- routerlink ja router-outlet
+    FormsModule  // ngForm
   ],
   providers: [],
   bootstrap: [AppComponent]

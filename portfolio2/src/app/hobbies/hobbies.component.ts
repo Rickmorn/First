@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HobbiesComponent implements OnInit {
 
+  sonum = "Lisa uus hobi!"
+
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit() {
+    this.sonum= "Uus hobi lisatud!"
   }
 
 }

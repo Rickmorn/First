@@ -1,1 +1,17 @@
-<div routerLink="/">Tagasi</div>
+<div routerLink="/"><button>Tagasi</button></div><br>
+
+
+<div>{{ sonum }}     
+</div>
+
+<form (ngSubmit)="onSubmit()" #lisamiseVorm="ngForm">
+    <label>Hobi nimi</label>
+    <br>
+        <input type="number">
+    <button *ngIf="sonum === 'Lisa uus hobi!'">Sisesta</button>
+
+</form>
+
+<!-- a-form   ngForm -->
+
+<!-- No directive found with exportAs 'ngForm' -->
