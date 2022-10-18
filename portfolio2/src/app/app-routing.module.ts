@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './about/about.component';
 import { CoursesComponent } from './courses/courses.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
 import { HomeComponent } from './home/home.component';
+import { MeistComponent } from './meist/meist.component';
+import { SeadedComponent } from './seaded/seaded.component';
 import { WorkComponent } from './work/work.component';
 
 const routes: Routes = [
@@ -10,6 +13,9 @@ const routes: Routes = [
   {path: "courses", component: CoursesComponent},
   {path: "hobbies", component: HobbiesComponent},
   {path: "work", component: WorkComponent},
+  {path: "about", component: AboutComponent},
+  {path: "seaded", component: SeadedComponent},
+  {path: "meist", component: MeistComponent},
   {path: "**", redirectTo: ""},
 ];
 

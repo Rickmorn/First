@@ -1,0 +1,12 @@
+<div>Meie tootajad:</div>
+
+<br>
+
+<div> Ott Tanak - kuller <button (click)="n2itaKontaktAndmeid()">Vota uhendust</button></div>
+<div> Kerttu Jukkum - lilleseadja <button (click)="n2itaKontaktAndmeid()">Vota uhendust</button></div>
+<div> Gustav Adolf - reklaaminagu <button (click)="n2itaKontaktAndmeid()">Vota uhendust</button></div>
+<div> Peeter Vosa - vaidluste osakond <button (click)="n2itaKontaktAndmeid()">Vota uhendust</button></div>
+
+<div>Tema Kontaktandmed: {{ kontaktAndmed }}</div>
+
+<div *ngIf="kontaktAndmed !==''">Tema kontaktandmed: {{ kontaktAndmed }}</div>

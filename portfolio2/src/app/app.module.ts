@@ -8,6 +8,9 @@ import { WorkComponent } from './work/work.component';
 import { CoursesComponent } from './courses/courses.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
 import { FormsModule } from '@angular/forms';
+import { AboutComponent } from './about/about.component';
+import { SeadedComponent } from './seaded/seaded.component';
+import { MeistComponent } from './meist/meist.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     WorkComponent,
     CoursesComponent,
-    HobbiesComponent
+    HobbiesComponent,
+    AboutComponent,
+    SeadedComponent,
+    MeistComponent
   ],
   imports: [
     BrowserModule, // <--- *ngIf

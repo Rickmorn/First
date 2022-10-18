@@ -1,1 +1,9 @@
 <div routerLink="/">Tagasi</div>
+<br>
+<div *ngIf="onInglisekeelne">Leht on inglise keeles!</div>
+<br>
+<div>{{ aadress }}</div>
+<div>{{ telefoninumber }}</div>
+<div>{{ email }}</div>
+<br>
+<button (click)="muudaInglisekeelseks()">Näita inglise keeles</button>
