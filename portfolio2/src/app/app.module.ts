@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
 import { SeadedComponent } from './seaded/seaded.component';
 import { MeistComponent } from './meist/meist.component';
+import { PoedComponent } from './poed/poed.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MeistComponent } from './meist/meist.component';
     HobbiesComponent,
     AboutComponent,
     SeadedComponent,
-    MeistComponent
+    MeistComponent,
+    PoedComponent
   ],
   imports: [
     BrowserModule, // <--- *ngIf

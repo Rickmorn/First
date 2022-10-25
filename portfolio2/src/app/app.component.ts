@@ -20,4 +20,12 @@ const routes: Routes= [
 })
 export class AppComponent {
   title = 'portfolio2';
+
+  //   salvestaKasutaja(logVorm: ngForm) {
+
+  // }
+
+
 }
+
+
