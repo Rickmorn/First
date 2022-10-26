@@ -12,6 +12,7 @@ import { AboutComponent } from './about/about.component';
 import { SeadedComponent } from './seaded/seaded.component';
 import { MeistComponent } from './meist/meist.component';
 import { PoedComponent } from './poed/poed.component';
+import { ArrayComponent } from './array/array.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PoedComponent } from './poed/poed.component';
     AboutComponent,
     SeadedComponent,
     MeistComponent,
-    PoedComponent
+    PoedComponent,
+    ArrayComponent
   ],
   imports: [
     BrowserModule, // <--- *ngIf

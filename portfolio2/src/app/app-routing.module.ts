@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { ArrayComponent } from './array/array.component';
 import { CoursesComponent } from './courses/courses.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
 import { HomeComponent } from './home/home.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: "seaded", component: SeadedComponent},
   {path: "meist", component: MeistComponent},
   {path: "poed", component: PoedComponent},
+  {path: "array", component: ArrayComponent},
   {path: "**", redirectTo: ""},
 ];
 

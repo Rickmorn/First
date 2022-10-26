@@ -1,0 +1,80 @@
+<div>
+<!-- <div *ngFor="let item of loend">
+    <button><div>Nimi</div>
+    <div>{{ item }}</div>
+    <div>true</div>
+    </button>
+</div> -->
+
+
+<button (click)="remove_all()">Eemalda kõik</button>
+<button (click)="sorteeriAZ()">Sorteeri A-Z</button>
+<button (click)="sorteeriZA()">Sorteeri Z-A</button>
+<button (click)="filtreeri()">Mitte rohkem kui 4 tähte</button>
+
+<form (ngSubmit)="lisa_sisu(randomVorm)" #randomVorm="ngForm">
+<button><input ngModel name="random" type="text"></button>
+</form>
+
+<br>
+<div>{{ rand.length }} tk </div>
+<br>
+
+<div *ngFor="let random of rand">
+    <button (click)="kustuta(random)">X</button>
+    {{ random }}
+</div>
+
+</div>
+
+
+<!-- <div>
+    <div>Nimi</div>
+    <div>1</div>
+    <div>true</div>
+</div>
+<div>
+    <div>Nimi</div>
+    <div>2</div>
+    <div>true</div>
+</div>
+<div>
+    <div>Nimi</div>
+    <div>3</div>
+    <div>true</div>
+</div>
+<div>
+    <div>Nimi</div>
+    <div>4</div>
+    <div>true</div>
+</div>
+<div>
+    <div>Nimi</div>
+    <div>5</div>
+    <div>true</div>
+</div>
+<div>
+    <div>Nimi</div>
+    <div>6</div>
+    <div>true</div>
+</div>
+<div>
+    <div>Nimi</div>
+    <div>7</div>
+    <div>true</div>
+</div>
+<div>
+    <div>Nimi</div>
+    <div>8</div>
+    <div>true</div>
+</div>
+<div>
+    <div>Nimi</div>
+    <div>9</div>
+    <div>true</div>
+</div>
+<div>
+    <div>Nimi</div>
+    <div>10</div>
+    <div>true</div>
+</div> -->
