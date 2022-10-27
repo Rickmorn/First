@@ -12,8 +12,8 @@
 <button (click)="sorteeriZA()">Sorteeri Z-A</button>
 <button (click)="filtreeri()">Mitte rohkem kui 4 tähte</button>
 
-<form (ngSubmit)="lisa_sisu(randomVorm)" #randomVorm="ngForm">
-<button><input ngModel name="random" type="text"></button>
+<form  #randomVorm="ngForm">
+<button><input ngModel name="random" type="text" (keyup.enter)="lisa_sisu(randomVorm)"></button>
 </form>
 
 <br>

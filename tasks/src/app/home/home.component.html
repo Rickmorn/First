@@ -1,1 +1,17 @@
-<p class="header">home works!</p>
+<br><br>
+
+<p>Ostukorvi harjutuse osa</p>
+
+<div *ngFor="let toode of tooted">
+    <button (click)="lisaOstukorvi(toode)">Lisa ostukorvi</button>
+    {{ toode }}
+</div>
+
+<br><br><br><br><br>
+<div>--------------------------------------------------------------------------------------------------------------------------------------------------</div>
+<br>
+<p>Märkmed</p>
+<br>
+<div>"= uus väärtus</div>
+<div>"===" kas vasak ja parem pool võrduvad</div>
+<div>":" tüübi andmiseks  (millist liiki väärtus sisse läheb "nt. string")</div>

@@ -1,1 +1,22 @@
-<p>third works!</p>
+<div>{{ sonum }}</div>
+
+<form (ngSubmit)="lisaToode(lisamiseVorm)" #lisamiseVorm="ngForm">
+    <label>Toote nimi</label><br>
+    <input ngModel name="nimi" type="text"> <br>
+    <button *ngIf="sonum === 'Lisa uus toode!'">Sisesta</button>
+</form>
+
+
+
+<div *ngIf="ostukorv.length > 0">Ostukorvis {{ ostukorv.length }} tk</div>
+<div *ngIf="ostukorv.length === 0">Ostukorv on tühi</div>
+<div>--------------------------------------------------------------------------------------------------------------------------------------------------</div>
+<button *ngIf="ostukorv.length > 0" (click)="tyhjenda()">Tühjenda</button>
+<div>--------------------------------------------------------------------------------------------------------------------------------------------------</div>
+<div *ngFor="let item of ostukorv">
+    <button (click)="lisa(item)">+</button> 
+    <button (click)="kustuta(item)">X</button>
+    {{ item }}
+    
+</div>
+
