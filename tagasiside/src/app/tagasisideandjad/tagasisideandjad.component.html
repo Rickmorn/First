@@ -1,0 +1,31 @@
+<div>{{hindajad.length}} tk</div>
+<br>----------------<br>
+<button (click)="mstart()"> Kõik M tähega algavad</button>
+<br>----------------<br>
+<button (click)="sixLetter()">6 kohalised nimed</button>
+<br>----------------<br>
+<button (click)="yend()">Y-ga lõppevad</button>
+<br>----------------<br>
+<button (click)="sortAZ()">Sorteeri A-Z</button>
+<br>----------------<br>
+<button (click)="sortZA()">Sorteeri Z-A</button>
+<br>----------------<br>
+<button (click)="addEST()">Lisa "EST-"</button>
+<br>----------------<br>
+
+<form (ngSubmit)="lisa(isikuVorm)" #isikuVorm="ngForm">
+    <label>Uue isiku nimi</label><br>
+    <input ngModel name="hindaja" type="text">
+    <button>Sisesta</button>
+</form>
+
+----------------
+
+<br>
+
+
+<div *ngFor="let hindaja of hindajad">
+    <button (click)="kustuta(hindaja)">X</button>
+    {{ hindaja }}
+
+</div>

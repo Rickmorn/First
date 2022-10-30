@@ -1,0 +1,28 @@
+.main-link-list{
+    justify-content: space-evenly;
+    display: flex;
+    text-align: center;
+    font-weight: bold;
+   
+}
+
+.main-link{
+    
+}
+
+.directButton{
+height: 40px;
+background-color: aquamarine;
+border-radius: 10px;
+
+}
+
+body{
+    background-color: bisque;
+}
+
+.header {
+    font-size: medium;
+    font-weight: bold;
+    font-style: italic;
+}

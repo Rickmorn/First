@@ -1,0 +1,15 @@
+<div>Tagasiside</div>
+<form (ngSubmit)="lisa(tagasisideVorm)" #tagasisideVorm="ngForm">
+    <Label></Label>
+    <input ngModel name="hinne" type="text">
+    <button>Sisesta</button>
+
+</form>
+
+<div>
+    <div *ngFor="let hinne of hinnang">
+        <button (click)="kustuta(hinne)">X</button>
+        {{ hinne }}
+
+    </div>
+</div>
