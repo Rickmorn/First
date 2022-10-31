@@ -10,7 +10,7 @@ export class ThirdComponent implements OnInit {
 
   sonum= "Lisa uus toode!";
 
-  ostukorv = ["coca", "piim", "munad", "vesi", "majonees", "jahu", "ananass"];
+  ostukorv = JSON.parse(localStorage.getItem("ostukorv") || "[]");
   
 
   constructor() { }
@@ -21,6 +21,7 @@ export class ThirdComponent implements OnInit {
   kustuta(klikitudItem: string){
     const j2rjekorraNumber = this.ostukorv.indexOf(klikitudItem);
     this.ostukorv.splice(j2rjekorraNumber, 1);
+    localStorage.setItem("ostukorv", JSON.stringify(this.ostukorv));
   }
 
   tyhjenda(){

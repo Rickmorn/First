@@ -1,10 +1,19 @@
+
+
+<div>--------------------------------------------------------------------------------------------------------------------------------------------------</div>
+
 <br><br>
 
 <p>Ostukorvi harjutuse osa</p>
 
-<div *ngFor="let toode of tooted">
+<div *ngFor="let toode of tooted; let i = index">
     <button (click)="lisaOstukorvi(toode)">Lisa ostukorvi</button>
+    
+    <div routerLink="/toode/{{i}}">
     {{ toode }}
+    </div>
+
+
 </div>
 
 <br><br><br><br><br>
@@ -15,3 +24,59 @@
 <div>"= uus väärtus</div>
 <div>"===" kas vasak ja parem pool võrduvad</div>
 <div>":" tüübi andmiseks  (millist liiki väärtus sisse läheb "nt. string")</div>
+
+<br><br>
+
+<div>localStorage lahtiselgitus:</div>
+<div>https://www.youtube.com/watch?v=IhayVbIiybk</div>
+<div>https://www.youtube.com/watch?v=TOpBvAOvU2A</div><br>
+<div>JavaScripti funktsioonid:</div>
+<div>Push: <br>
+    https://www.youtube.com/watch?v=g1hlKlovok8</div><br>
+<div>Splice: <br>
+    https://www.youtube.com/watch?v=FFas8cMHVwg</div><br>
+
+
+
+Splice:
+https://www.youtube.com/watch?v=FFas8cMHVwg
+
+Map:
+https://www.youtube.com/watch?v=P4RAFdZDn3M
+
+Filter:
+https://www.youtube.com/watch?v=mJGv12UHqXc
+
+Slice:
+https://www.youtube.com/watch?v=JfZv9QNSpi4
+
+Sort:
+https://www.youtube.com/watch?v=RsFBsBep-hA
+
+let vs const
+(React ei kasutagi var lühendit - videos öeldakse ka, et ärge kasutage)
+https://www.youtube.com/watch?v=dzEieWaOJE0
+
+if / else
+https://www.youtube.com/watch?v=_5SgikgFf0U
+
+&amp;&amp; / ||
+https://www.youtube.com/watch?v=OVZLcwhjRYI
+
+slice vs splice
+https://www.youtube.com/watch?v=d-Be730vMmg
+
+Tulevikus kasutame:
+ForEach:
+https://www.youtube.com/watch?v=SXb5LN_opbA
+
+IndexOf:
+https://www.youtube.com/watch?v=VoY6AkDZjZ4
+
+ternary operator
+https://www.youtube.com/watch?v=s4sB1hm73tw
+https://www.youtube.com/watch?v=VBCOx4CqBz0
+
++= ja ++
+(teisendame järgmisel kohtumisel ostukorvi koguse suurendamise ja vähendamise ++ ja -- peale)
+https://www.youtube.com/watch?v=w4UiCWw4Buk

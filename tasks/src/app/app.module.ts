@@ -10,6 +10,7 @@ import { ThirdComponent } from './third/third.component';
 import { FourthComponent } from './fourth/fourth.component';
 import { FifthComponent } from './fifth/fifth.component';
 import { FormsModule } from '@angular/forms';
+import { YksikToodeComponent } from './yksik-toode/yksik-toode.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     SecondComponent,
     ThirdComponent,
     FourthComponent,
-    FifthComponent
+    FifthComponent,
+    YksikToodeComponent
   ],
   imports: [
     BrowserModule,
