@@ -11,6 +11,7 @@ import { FourthComponent } from './fourth/fourth.component';
 import { FifthComponent } from './fifth/fifth.component';
 import { FormsModule } from '@angular/forms';
 import { YksikToodeComponent } from './yksik-toode/yksik-toode.component';
+import { SeadedComponent } from './seaded/seaded.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { YksikToodeComponent } from './yksik-toode/yksik-toode.component';
     ThirdComponent,
     FourthComponent,
     FifthComponent,
-    YksikToodeComponent
+    YksikToodeComponent,
+    SeadedComponent
   ],
   imports: [
     BrowserModule,

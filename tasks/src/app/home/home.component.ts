@@ -9,10 +9,29 @@ export class HomeComponent implements OnInit {
 
   tooted = JSON.parse(localStorage.getItem("tooted") || "[]");
 
+  kujundus=localStorage.getItem("veebilehe_kujundus") || "light mode";
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  colored(){
+    localStorage.setItem("veebilehe_kujundus", "colored");
+
+  }
+
+  dark_mode(){
+    localStorage.setItem("veebilehe_kujundus", "dark_mode");
+
+
+  }
+
+  light_mode(){
+    localStorage.setItem("veebilehe_kujundus", "light_mode")
+
+  }
+
 
   lisaOstukorvi(klikitudToode: string){
     // const ostukorvLS = localStorage.getItem("ostukorv") || "[]";

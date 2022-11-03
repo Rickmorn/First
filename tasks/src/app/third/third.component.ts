@@ -12,6 +12,7 @@ export class ThirdComponent implements OnInit {
 
   ostukorv = JSON.parse(localStorage.getItem("ostukorv") || "[]");
   
+  
 
   constructor() { }
 

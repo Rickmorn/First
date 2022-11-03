@@ -24,8 +24,9 @@
 <br>
 
 
-<div *ngFor="let hindaja of hindajad">
+<div *ngFor="let hindaja of hindajad;let i=index">
     <button (click)="kustuta(hindaja)">X</button>
+    <button routerLink="/andja/{{i}}">Vaata lähemalt</button>
     {{ hindaja }}
 
 </div>

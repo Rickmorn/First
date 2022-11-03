@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { AvalehtComponent } from './avaleht/avaleht.component';
 import { TagasisideComponent } from './tagasiside/tagasiside.component';
 import { TagasisideandjadComponent } from './tagasisideandjad/tagasisideandjad.component';
+import { TagasisideAndjaComponent } from './tagasiside-andja/tagasiside-andja.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AvalehtComponent,
     TagasisideComponent,
-    TagasisideandjadComponent
+    TagasisideandjadComponent,
+    TagasisideAndjaComponent
   ],
   imports: [
     BrowserModule,
