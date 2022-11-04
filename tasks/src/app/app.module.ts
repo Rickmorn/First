@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,9 +10,10 @@ import { SecondComponent } from './second/second.component';
 import { ThirdComponent } from './third/third.component';
 import { FourthComponent } from './fourth/fourth.component';
 import { FifthComponent } from './fifth/fifth.component';
-import { FormsModule } from '@angular/forms';
 import { YksikToodeComponent } from './yksik-toode/yksik-toode.component';
 import { SeadedComponent } from './seaded/seaded.component';
+import { HaldaTooteidComponent } from './halda-tooteid/halda-tooteid.component';
+import { MuudaToodeComponent } from './muuda-toode/muuda-toode.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,15 @@ import { SeadedComponent } from './seaded/seaded.component';
     FourthComponent,
     FifthComponent,
     YksikToodeComponent,
-    SeadedComponent
+    SeadedComponent,
+    HaldaTooteidComponent,
+    MuudaToodeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule, // ngForm
+    ReactiveFormsModule, // formsGroup
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,13 @@
+<div *ngFor="let toode of tooted; let i = index">
+    
+    
+    
+    <div routerLink="/toode/{{i}}">
+    {{ i+1 }}
+    {{ toode }}
+    </div>
+
+    <button (click)="kustuta(i)">X</button>
+    <button routerLink="/muuda/{{i}}">Muuda</button>
+
+</div>

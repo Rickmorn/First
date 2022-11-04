@@ -1,6 +1,8 @@
 <form (ngSubmit)="lisa(poeVorm)" #poeVorm="ngForm">
     <label>Uue poe nimi</label><br>
-    <input ngModel name="pood" type="text"><br>
+    <input ngModel name="nimi" type="text"><br>
+    <label>Uue poe lahtiolekuaeg</label><br>
+    <input ngModel name="aeg" type="text"><br>
     <button>Sisesta</button><br>
 </form>
 
@@ -21,10 +23,17 @@
 
 <div>{{ poed.length }} tk</div>
 <div *ngFor="let pood of poed"> 
-    {{ pood }}
+    {{ pood.nimi }} ( {{ pood.aeg }} )
     <button (click)="kustuta(pood)">X</button> 
 </div>
+<br><br><br>
 
+
+<div *ngFor="let tootaja of tootajad">
+    {{ tootaja.nimi }}
+    -
+    {{ tootaja.amet }}
+</div>
 
 
 

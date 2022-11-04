@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import hindajadFailist from './tagasisideandjad.json';
+import hindajadFailist from '../tagasisideandjad/tagasisideandjad.json';
 
 @Component({
   selector: 'app-tagasiside-andja',
@@ -9,13 +9,13 @@ import hindajadFailist from './tagasisideandjad.json';
 })
 export class TagasisideAndjaComponent implements OnInit {
 
-  hindajad = hindajadFailist
+  hindajad = ""
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     const index=Number(this.route.snapshot.paramMap.get("index"));
-    this.hindajad = tagasisideAndjad[index]
+    this.hindajad = hindajadFailist[index]
   }
 
 }
