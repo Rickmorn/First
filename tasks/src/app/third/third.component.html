@@ -3,6 +3,10 @@
 <form (ngSubmit)="lisaToode(lisamiseVorm)" #lisamiseVorm="ngForm">
     <label>Toote nimi</label><br>
     <input ngModel name="nimi" type="text"> <br>
+    <label>Toote pilt</label><br>
+    <input ngModel name="pilt" type="text"> <br>
+    <label>Toote hind</label><br>
+    <input ngModel name="hind" type="number"> <br>
     <button *ngIf="sonum === 'Lisa uus toode!'">Sisesta</button>
 </form>
 
@@ -16,7 +20,12 @@
 <div *ngFor="let item of ostukorv">
     <button (click)="lisa(item)">+</button> 
     <button (click)="kustuta(item)">X</button>
-    {{ item }}
+    {{ item.nimi }}
+    <img src="{{ item.pilt }}" alt="" class="pilt"> 
+    {{ item.hind }}
     
 </div>
+
+<div>Ostukorvi summa kokku: {{ kogusumma }}</div>
+<div>Ostukorvi toodete keskmine hind: {{ avg }}</div>
 

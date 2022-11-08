@@ -1,8 +1,17 @@
 
-<div>{{ leitudToode }}</div>
+<div>
+<img src="{{ leitudToode.pilt }}" alt=""><br>
+    <!-- nimetus: <div> {{ leitudToode.nimi }} </div>
+    hind: <div> {{ leitudToode.hind }} </div> -->
+</div>
+    <br>
 
 <form (ngSubmit)="muuda(muutmiseVorm)" [formGroup]="muutmiseVorm">
     <label>Toote nimi</label>  <br>
     <input formControlName = "nimi" type="text">  <br>
+    <label>Toote hind</label>  <br>
+    <input formControlName = "hind" type="number">  <br>
+    <label>Toote pilt</label>  <br>
+    <input formControlName = "pilt" type="text">  <br>
     <button>Muuda</button>
 </form>

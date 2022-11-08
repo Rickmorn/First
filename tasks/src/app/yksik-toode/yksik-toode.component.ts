@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class YksikToodeComponent implements OnInit {
 
-  leitudToode = "";  // l2heb HTML-i
+  leitudToode: any;  // l2heb HTML-i
 
   // 1. mul on vaja leida KÕIK tooted
   // 2. mul on vaja midagi unikaalset toote kohta

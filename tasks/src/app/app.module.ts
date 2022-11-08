@@ -14,6 +14,7 @@ import { YksikToodeComponent } from './yksik-toode/yksik-toode.component';
 import { SeadedComponent } from './seaded/seaded.component';
 import { HaldaTooteidComponent } from './halda-tooteid/halda-tooteid.component';
 import { MuudaToodeComponent } from './muuda-toode/muuda-toode.component';
+import { PersonsComponent } from './persons/persons.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MuudaToodeComponent } from './muuda-toode/muuda-toode.component';
     YksikToodeComponent,
     SeadedComponent,
     HaldaTooteidComponent,
-    MuudaToodeComponent
+    MuudaToodeComponent,
+    PersonsComponent
   ],
   imports: [
     BrowserModule,

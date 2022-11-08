@@ -11,12 +11,14 @@
 <p>Ostukorvi harjutuse osa</p>
 
 <div *ngFor="let toode of tooted; let i = index">
-    <button (click)="lisaOstukorvi(toode)">Lisa ostukorvi</button>
+    
     
     <div routerLink="/toode/{{i}}">
-    {{ toode }}
+    <img src="{{ toode.pilt }}" alt="">
+    <div> {{ toode.nimi }} </div>
+    <div> {{ toode.hind }} </div>
     </div>
-
+    <button (click)="lisaOstukorvi(toode)">Lisa ostukorvi</button>
 
 </div>
 

@@ -3,8 +3,11 @@
     
     
     <div routerLink="/toode/{{i}}">
-    {{ i+1 }}
-    {{ toode }}
+   
+    <img src="{{ toode.pilt }}" alt="" class="pilt"><br>
+     ID: {{ i+1 }}
+    <div>Nimetus:  {{ toode.nimi }} </div>
+    <div>Hind:  {{ toode.hind }} </div>
     </div>
 
     <button (click)="kustuta(i)">X</button>

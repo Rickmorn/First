@@ -1,0 +1,18 @@
+<div>
+    <button (click)="tyhjenda()">Kustuta k8ik</button>
+</div>
+Inimeste hulk: {{ inimesed.length }}
+<br>
+Average: {{calculateAverage()}}
+<div>---------------</div>
+<div *ngFor="let inimene of inimesed;">
+    <button (click)="kustuta(inimene)">X</button>
+    <button (click)="lisa(inimene)">lisa</button><br>
+    
+    {{ inimene.name }} <br>
+    {{ inimene.username }} <br>
+    {{ inimene.email }} <br>
+    {{ inimene.vanus }}
+    
+    <div>---------------</div>
+</div>
