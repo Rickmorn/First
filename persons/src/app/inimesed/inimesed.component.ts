@@ -87,7 +87,10 @@ export class InimesedComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  lisa(vorm :NgForm){
-    this.inimesed.push(vorm.value.name)
+  lisaLehele(item: any){
+    const leht = JSON.parse(localStorage.getItem("inimesed") || "[]");
+    leht.push(item);
+    localStorage.setItem("inimesed", JSON.stringify(leht));
+    // this.inimesed.push(item)
   }
 }

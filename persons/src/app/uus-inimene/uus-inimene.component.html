@@ -1,0 +1,22 @@
+<div>{{ sonum }}</div>
+<br><br>
+<form (ngSubmit)="lisaInim(lisamiseVorm)" #lisamiseVorm="ngForm">
+    <label>ID</label><br>
+    <input type="number"><br>
+    <label>Name</label><br>
+    <input type="text"><br>
+    <label>Username</label><br>
+    <input type="text"><br>
+    <label>Email</label><br>
+    <input type="text"><br>
+    <label>Age</label><br>
+    <input type="number"><br><br>
+    <button>Sisesta</button>
+</form>
+
+<!-- 
+ID: {{ inimene.id }}<br>
+    NAME: {{ inimene.name }}<br>
+    USERNAME: {{ inimene.username }}<br>
+    EMAIL: {{ inimene.email }}<br>
+    AGE: -->

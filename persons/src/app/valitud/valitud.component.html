@@ -3,16 +3,21 @@
 </div>
 Inimeste hulk: {{ inimesed.length }}
 <br>
-Average: {{calculateAverage()}}
+<div *ngIf="inimesed.length > 0"> Average: {{ average }}</div>
+<div *ngIf="inimesed.length > 0"> Vanus kokku: {{ sum }}</div>
 <div>---------------</div>
-<div *ngFor="let inimene of inimesed;">
+<div *ngFor="let inimene of inimesed; let i = index">
     <button (click)="kustuta(inimene)">X</button>
-    <button (click)="lisa(inimene)">lisa</button><br>
-    
+    <button (click)="lisa(inimene)">lisa</button>
+    <button routerLink="/muuda/{{i}}">Muuda</button><br>
+    <div routerLink="/inimene/{{i}}">
+
     {{ inimene.name }} <br>
     {{ inimene.username }} <br>
     {{ inimene.email }} <br>
     {{ inimene.vanus }}
-    
+
+    </div>
+
     <div>---------------</div>
 </div>

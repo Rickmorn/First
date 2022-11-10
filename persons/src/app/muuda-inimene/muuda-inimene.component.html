@@ -1,0 +1,16 @@
+<div>{{ leitudInimene.name }}</div><br>
+
+
+<form (ngSubmit)="muuda(muutmiseVorm)" [formGroup]="muutmiseVorm">
+    <label>ID</label> <br>
+    <input formControlName="id" type="number"> <br>
+    <label>Name</label> <br>
+    <input formControlName="name" type="text"> <br>
+    <label>Username</label> <br>
+    <input formControlName="username" type="text"> <br>
+    <label>Email</label> <br>
+    <input formControlName="email" type="text"> <br>
+    <label>Vanus</label> <br>
+    <input formControlName="vanus" type="number"> <br><br>
+    <button>Muuda</button>
+</form>

@@ -1,6 +1,5 @@
 <div *ngFor="let inimene of inimesed">
-    <BUTTON>Täpsemalt</BUTTON><br>
-    <!-- <button (ngSubmit)="lisa(inimesedVorm)" #inimesedVorm="ngForm">Lisa</button> -->
+    <BUTTON (click)="lisaLehele(inimene)">Lisa</BUTTON><br>
     ID: {{ inimene.id }}<br>
     NAME: {{ inimene.name }}<br>
     USERNAME: {{ inimene.username }}<br>
