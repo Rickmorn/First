@@ -18,10 +18,10 @@ export class UusInimeneComponent implements OnInit {
 
   lisaInim(vorm: NgForm){
     this.sonum = "Uus inimene lisatud";
-    const inimesedLS = localStorage.getItem("inimesed") || "[]";
+    const inimesedLS = localStorage.getItem("inimesed2") || "[]";
     const inimesed = JSON.parse(inimesedLS);
     inimesed.push(vorm.value);
     const uuedInimesed = JSON.stringify(inimesed);
-    localStorage.setItem("inimesed", uuedInimesed);
+    localStorage.setItem("inimesed2", uuedInimesed);
   }
 }

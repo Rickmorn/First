@@ -1,0 +1,10 @@
+{
+    "nav": {
+        "admin": "Admnistraatori vaade",
+        "cart": "Ostukorv"
+    },
+    "admin": {
+        "add-product": "Lisa uus toode",
+        "maintain-products": "Halda tooteid"
+    }
+}

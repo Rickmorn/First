@@ -2,15 +2,15 @@
 <br><br>
 <form (ngSubmit)="lisaInim(lisamiseVorm)" #lisamiseVorm="ngForm">
     <label>ID</label><br>
-    <input type="number"><br>
+    <input ngModel name="id" type="number"><br>
     <label>Name</label><br>
-    <input type="text"><br>
+    <input ngModel name="name" type="text"><br>
     <label>Username</label><br>
-    <input type="text"><br>
+    <input ngModel name="username" type="text"><br>
     <label>Email</label><br>
-    <input type="text"><br>
+    <input ngModel name="email" type="text"><br>
     <label>Age</label><br>
-    <input type="number"><br><br>
+    <input ngModel name="vanus" type="number"><br><br>
     <button>Sisesta</button>
 </form>
 
