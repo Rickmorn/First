@@ -1,0 +1,10 @@
+{
+    "nav": {
+        "admin": "Vue Administrateur",
+        "cart": "Panier"
+    },
+    "admin": {
+        "add-product": "Ajouter un nouveau produit",
+        "maintain-products": "Maintenir les produits"
+    }
+}
