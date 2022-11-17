@@ -1,1 +1,15 @@
-<p>cart works!</p>
+<div *ngIf="cart.length === 0">{{ message }}</div>
+<div>{{ cart.length }} tk</div> <br>
+<div>{{ sum }} EUR kokku</div><br>
+
+<button (click)="emptyCart()">Empty cart</button> <br><br>
+<div *ngFor="let item of cart">
+
+    {{ item.name }} <br>
+    <img src="{{ item.image }}" alt=""> <br>
+    {{ item.price }} EUR <br>
+    <button (click)="removeItem(item)">Remove item</button>
+    <br><br>
+
+
+</div>

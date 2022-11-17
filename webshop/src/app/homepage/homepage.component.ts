@@ -36,4 +36,13 @@ export class HomepageComponent implements OnInit {
   sortPriceDesc(){
     this.products.sort((a,b) => b.price - a.price);
   }
+
+  addToCart(clickedItem: any){
+    const cartLS = localStorage.getItem("cart") || "[]";
+    const cart = JSON.parse(cartLS);
+    cart.push(clickedItem);
+    const newCart = JSON.stringify(cart);
+    localStorage.setItem("cart", newCart);
+
+  }
 }
