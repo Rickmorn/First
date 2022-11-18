@@ -1,15 +1,26 @@
 <div *ngIf="cart.length === 0">{{ message }}</div>
-<div>{{ cart.length }} tk</div> <br>
-<div>{{ sum }} EUR kokku</div><br>
+<!-- <div>{{ cart.length }} tk</div> <br> -->
+<div>Tooteid kokku: {{ totalItems }} </div>
+<div>{{ sum.toFixed(2) }} EUR kokku</div><br>
 
 <button (click)="emptyCart()">Empty cart</button> <br><br>
-<div *ngFor="let item of cart">
+<div class="product" *ngFor="let item of cart; let i = index">
+    
+    <img class="image" src="{{ item.product.image }}" alt="">
+    
+    <div routerLink="/product/{{item.product.id}}" class="name">{{ item.product.name }}</div>
 
-    {{ item.name }} <br>
-    <img src="{{ item.image }}" alt=""> <br>
-    {{ item.price }} EUR <br>
-    <button (click)="removeItem(item)">Remove item</button>
-    <br><br>
+    <div class="price">Toote hind: {{ item.product.price }} EUR</div>
+
+    <div class="quantity">
+        <img src="assets/minus.png" class="button" (click)="decrease(i)">
+        <div>{{ item.quantity }} tk</div>
+        <img src="assets/plus.png" class="button" (click)="increase(i)">
+    </div>
+    <div class="sum">Koguse hind kokku:<br>{{ (item.product.price * item.quantity).toFixed(2) }} EUR</div>
+    <img src="assets/remove.png" class="button" (click)="removeItem(i)">
 
 
 </div>
+
+

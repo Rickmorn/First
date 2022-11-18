@@ -39,8 +39,16 @@ export class HomepageComponent implements OnInit {
 
   addToCart(clickedItem: any){
     const cartLS = localStorage.getItem("cart") || "[]";
-    const cart = JSON.parse(cartLS);
-    cart.push(clickedItem);
+    const cart: any[] = JSON.parse(cartLS);
+    // {product: clickedItem, quanity : 1}
+    const index = cart.findIndex(element => element.product.id === clickedItem.id);
+    if (index >= 0) {
+      cart[index].quantity = cart[index].quantity + 1;
+    } else {
+      cart.push({"product": clickedItem, "quantity": 1});
+      //    {product: {id: 1, name: "s", price:21}, quantity: 1}
+    }
+    
     const newCart = JSON.stringify(cart);
     localStorage.setItem("cart", newCart);
 
