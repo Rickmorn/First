@@ -6,5 +6,13 @@
     "admin": {
         "add-product": "Add new product",
         "maintain-products": "Maintain products"
+    },
+    "home":{
+        "remove-filters":"Remove filters",
+        "sortaz":"Sort A-Z",
+        "sortza":"Sort Z-A",
+        "sort-price-asc":"Price ascending",
+        "sort-price-desc":"Price descending",
+        "add-to-cart":"Add to cart"
     }
 }

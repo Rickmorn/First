@@ -1,3 +1,4 @@
+import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
@@ -24,12 +25,14 @@ export class ThirdComponent implements OnInit {
     this.avg = this.kogusumma/this.ostukorv.length;
   }
 
-  kustuta(klikitudItem: string){
+  kustuta(klikitudItem: any){
     const j2rjekorraNumber = this.ostukorv.indexOf(klikitudItem);
     this.ostukorv.splice(j2rjekorraNumber, 1);
     localStorage.setItem("ostukorv", JSON.stringify(this.ostukorv));
     this.kogusumma = 0;
-    this.ostukorv.forEach(ese => this.kogusumma = this.kogusumma + ese.hind);
+    this.ostukorv.forEach(ese => this.kogusumma = this.kogusumma + ese.hind * ese.quantity);
+    this.kogusumma = 0;
+    this.ostukorv.forEach(ese => this.kogusumma = this.kogusumma + ese.quantity);
   }
 
   tyhjenda(){
@@ -38,11 +41,24 @@ export class ThirdComponent implements OnInit {
     // this.ostukorv.forEach(ese => this.kogusumma = this.kogusumma + ese.hind);
   }
 
-  lisa(klikitudItem: string){
-    this.ostukorv.push(klikitudItem);
+  lisa(klikitudItem: number){
+    this.ostukorv[klikitudItem].quantity = this.ostukorv[klikitudItem].quantity + 1;
+    // this.ostukorv.push(klikitudItem);
+    localStorage.setItem("ostukorv", JSON.stringify(this.ostukorv));
     this.kogusumma = 0;
-    this.ostukorv.forEach(ese => this.kogusumma = this.kogusumma + ese.hind);
+    this.ostukorv.forEach(ese => this.kogusumma = this.kogusumma + ese.hind * ese.quantity);
+    this.kogusumma = 0;
+    this.ostukorv.forEach(ese => this.kogusumma = this.kogusumma + ese.quantity);
 
+  }
+
+  eemalda(klikitudItem: number){
+    this.ostukorv[klikitudItem].quantity = this.ostukorv[klikitudItem].quantity - 1;
+    if (this.ostukorv[klikitudItem].quantity === 0) {
+      this.kustuta(klikitudItem);
+    }
+    
+    // this.ostukorv.splice(klikitudItem, 1)
   }
 
   lisaToode(vorm: NgForm){

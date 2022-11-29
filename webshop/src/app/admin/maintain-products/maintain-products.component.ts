@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import productsFromFile from "../../../assets/products.json";
+import { DatabaseService } from 'src/app/services/database.service';
+// import productsFromFile from "../../../assets/products.json";
 
 @Component({
   selector: 'app-maintain-products',
@@ -9,23 +11,35 @@ import productsFromFile from "../../../assets/products.json";
 export class MaintainProductsComponent implements OnInit {
 
   searchProduct = "";
-  products = productsFromFile;
-
-  constructor() { }
+  products: any[] = [];
+  private dbProducts: any[] = [];
+  descriptionLetters = 5;
+  
+  constructor(private http: HttpClient, 
+    private databaseService: DatabaseService) { }
 
   ngOnInit(): void {
+    this.http.get<any[]>(this.databaseService.productsDbUrl).subscribe(response => {
+      this.products = response.slice();  // .slice() -> malukoha kaotamine
+      this.dbProducts = response.slice(); // programm ei naeks neid identsena (tulevad samast kohast)
+    })
   }
 
+  
+
   deleteProduct(productClicked: any){
-    const i = productsFromFile.findIndex(element => element.id === productClicked.id);
-    productsFromFile.splice(i,1);
-    this.products = productsFromFile;
+    const i = this.dbProducts.findIndex(element => element.id === productClicked.id);
+    this.dbProducts.splice(i,1);
+    this.products = this.dbProducts;
     this.searchProducts();
+    this.http.put(this.databaseService.productsDbUrl, this.dbProducts).subscribe();
   }
 
   searchProducts(){
     // console.log(this.searchProduct);
-    this.products = productsFromFile.filter(element => 
+    this.products = this.dbProducts.filter(element => 
       element.name.toLocaleLowerCase().includes(this.searchProduct.toLocaleLowerCase()));
   }
+  
+  
 }

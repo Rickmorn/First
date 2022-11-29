@@ -17,15 +17,26 @@
 <div>--------------------------------------------------------------------------------------------------------------------------------------------------</div>
 <button *ngIf="ostukorv.length > 0" (click)="tyhjenda()">Tühjenda</button>
 <div>--------------------------------------------------------------------------------------------------------------------------------------------------</div>
-<div *ngFor="let item of ostukorv">
-    <button (click)="lisa(item)">+</button> 
-    <button (click)="kustuta(item)">X</button>
+
+
+
+
+<div *ngFor="let item of ostukorv; let i = index">
+     
+    <button (click)="kustuta(i)">X</button>
     {{ item.nimi }}
+    <button (click)="lisa(i)">+</button>
+    {{ item.quantity }} tk
+    <button (click)="eemalda(i)">-</button>
     <img src="{{ item.pilt }}" alt="" class="pilt"> 
     {{ item.hind }}
     
+
+
+
+
 </div>
 
-<div>Ostukorvi summa kokku: {{ kogusumma }}</div>
-<div>Ostukorvi toodete keskmine hind: {{ avg }}</div>
+<div>Ostukorvi summa kokku: {{ kogusumma.toFixed(2) }}</div>
+<div>Ostukorvi toodete keskmine hind: {{ avg.toFixed(2) }}</div>
 

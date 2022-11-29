@@ -43,6 +43,7 @@ export class HomeComponent implements OnInit {
 
     const ostukorv2= JSON.parse(localStorage.getItem("ostukorv") || "[]")
     ostukorv2.push(klikitudToode);
+    // const index = ostukorv2
     localStorage.setItem("ostukorv", JSON.stringify(ostukorv2));
   }
 

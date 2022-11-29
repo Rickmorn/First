@@ -6,5 +6,16 @@
     "admin": {
         "add-product": "Lisa uus toode",
         "maintain-products": "Halda tooteid"
+    },
+    "toast":{
+        "added-to-cart": "Edukalt lisatud ostukorvi"
+    },
+    "home":{
+        "remove-filters":"Eemalda filtrid",
+        "sortaz":"Sorteeri A-Z",
+        "sortza":"Sorteeri Z-A",
+        "sort-price-asc":"Sorteeri hind kasvavalt",
+        "sort-price-desc":"Sorteeri hind kahanevalt",
+        "add-to-cart":"Lisa ostukorvi"
     }
-}
+}   

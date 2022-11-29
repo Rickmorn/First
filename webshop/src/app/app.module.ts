@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+ 
+import { ToastService, AngularToastifyModule } from 'angular-toastify';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -15,6 +18,8 @@ import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { DescriptionShortenerPipe } from './pipes/description-shortener.pipe';
 
 
 @NgModule({
@@ -27,13 +32,17 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
     EditProductComponent,
     MaintainProductsComponent,
     AdminhomeComponent,
+    NotFoundComponent,
+    DescriptionShortenerPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    AngularToastifyModule,
+    NgxSliderModule,
     ReactiveFormsModule,
-    HttpClientModule,
+        HttpClientModule,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
@@ -42,7 +51,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
             }
           })   
   ],
-  providers: [],
+  providers: [ToastService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
