@@ -41,5 +41,10 @@ export class MaintainProductsComponent implements OnInit {
       element.name.toLocaleLowerCase().includes(this.searchProduct.toLocaleLowerCase()));
   }
   
+  changeProductActive(productClicked: any){
+    const i = this.dbProducts.findIndex(element => element.id === productClicked.id);
+    this.dbProducts[i].active = !productClicked.active
+    this.http.put(this.databaseService.productsDbUrl, this.dbProducts).subscribe();
+  }
   
 }

@@ -16,5 +16,5 @@
     <input formControlName="description" type="text"> <br>
     <label>Active</label> <br>
     <input formControlName="active" type="checkbox"> <br> <br>
-    <button>Changes</button>
+    <button [disabled]="idUnique === false || editProductForm.invalid">Changes</button>
 </form>
