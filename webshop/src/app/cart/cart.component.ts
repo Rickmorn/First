@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { CartProduct } from '../models/cart-product.model';
 import { ParcelMachnine } from '../models/parcel-Machine.model';
@@ -72,5 +72,33 @@ export class CartComponent implements OnInit {
     this.cart.forEach((item: any) => this.sum = this.sum + item.product.price * item.quantity);
     this.totalItems = 0;
     this.cart.forEach(item => this.totalItems = this.totalItems + item.quantity);
+  }
+
+  pay(){
+    // salvestan tellimuse -> andmebaas annab mulle tellimuse ID
+    //                            salvestan tellimuse maksmata kujul
+const paymentURL = "https://igw-demo.every-pay.com/api/v4/payments/oneoff"
+
+    const paymentData = {      
+        "api_username": "92ddcfab96e34a5f",
+        "account_name": "EUR3D1",
+        "amount": this.sum,
+        "order_reference": Math.random() * 6666,
+        "nonce": "a9b7f7e794367sdfc2c85asdzfdhdadd34573154a01b9902"+ new Date() + Math.random() * 6666,
+        "timestamp": new Date(),
+        "customer_url": "https://generic-shop.web.app"        
+    }
+
+    const headers = {
+      headers: new HttpHeaders({"Authorization":"Basic OTJkZGNmYWI5NmUzNGE1Zjo4Y2QxOWU5OWU5YzJjMjA4ZWU1NjNhYmY3ZDBlNGRhZA=="})
+    }
+
+    this.http.post<any>(paymentURL, paymentData, headers).subscribe(response => {
+      window.location.href = response.payment_link;
+    });
+
+
+
+    // muudan andmebaasis tellimuse staatuse makstuks
   }
 }
