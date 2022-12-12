@@ -10,6 +10,7 @@ import { EmployeeService } from './employee.service';
 export class EmployeesComponent implements OnInit {
 
   form: FormGroup;
+  employees :any[] = [];
 
   constructor(private employeeService: EmployeeService,
               private fb: FormBuilder) {
@@ -17,6 +18,9 @@ export class EmployeesComponent implements OnInit {
 
   ngOnInit() {
     this.initForm();
+    this.employeeService.getEmployees().subscribe(res => {
+    this.employees = res.data;
+    })
   }
 
   private initForm(): void {
